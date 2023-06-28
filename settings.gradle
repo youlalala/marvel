@@ -16,3 +16,6 @@ rootProject.name = "Marvel"
 include ':app'
 include ':feature:characters'
 include ':feature:comics'
+include ':common-ui'
+include ':domain'
+include ':data'

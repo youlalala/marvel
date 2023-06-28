@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.youlalala.marvel.feature.comics'
+    namespace 'com.youlalala.marvel.common_ui'
     compileSdk 33
 
     defaultConfig {
@@ -31,8 +31,6 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':domain')
-    implementation project(path: ':common-ui')
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
