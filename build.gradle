@@ -9,4 +9,13 @@ plugins {
 ext{
     //hilt version
     hiltVersion = "2.42"
+
+    //retrofit version
+    retrofitVersion = "2.9.0"
+
+    //gson version
+    gsonVersion = "2.10.1"
+
+    //okhttp version
+    okhttpVersion = "4.10.0"
 }
