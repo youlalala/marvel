@@ -19,7 +19,9 @@ android {
 
         def localProperties = new Properties()
         localProperties.load(new FileInputStream(rootProject.file("local.properties")))
-        buildConfigField("String", "BASE_URL", localProperties['BASE_URL'])
+        buildConfigField("String", "MARVEL_BASE_URL", localProperties['MARVEL_BASE_URL'])
+        buildConfigField("String", "MARVEL_PUBLIC_KEY", localProperties['MARVEL_PUBLIC_KEY'])
+        buildConfigField("String", "MARVEL_PRIVATE_KEY", localProperties['MARVEL_PRIVATE_KEY'])
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
