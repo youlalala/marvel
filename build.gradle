@@ -7,6 +7,9 @@ plugins {
 }
 
 ext{
+    //appcompat
+    appcompat_version = "1.3.1"
+
     //hilt version
     hiltVersion = "2.42"
 
@@ -18,4 +21,7 @@ ext{
 
     //okhttp version
     okhttpVersion = "4.10.0"
+
+    //navigation version
+    nav_version = "2.6.0"
 }

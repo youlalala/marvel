@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/nav_characters"
+        android:icon="@drawable/ic_characters"
+        android:title="Characters" />
+
+    <item
+        android:id="@id/nav_comics"
+        android:icon="@drawable/ic_comics"
+        android:title="Comics" />
+
+</menu>
