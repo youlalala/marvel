@@ -6,18 +6,14 @@ import java.util.Date
 
 object Utils {
 
-    fun getTsHash(): MutableMap<String,String> {
-        val map = mutableMapOf<String, String>()
-        val ts = getTimesStamp()
-        map["ts"] = ts
-        map["hash"] = md5(
+    fun getTsHash(ts: String): String {
+        return md5(
             ts +
                     BuildConfig.MARVEL_PRIVATE_KEY +
                     BuildConfig.MARVEL_PUBLIC_KEY)
-        return map
     }
 
-    private fun getTimesStamp(): String = Date().time.toString()
+    fun getTimesStamp(): String = Date().time.toString()
 
     private fun md5(string: String): String {
         val md5 = "MD5"
