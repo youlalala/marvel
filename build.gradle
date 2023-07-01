@@ -24,4 +24,7 @@ ext{
 
     //navigation version
     nav_version = "2.6.0"
+
+    //glide version
+    glide_version = "4.15.1"
 }
