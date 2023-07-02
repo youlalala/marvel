@@ -1,6 +1,6 @@
 package com.youlalala.marvel.domain.usecase
 
-import com.youlalala.marvel.domain.CharactersRepository
+import com.youlalala.marvel.domain.repository.CharactersRepository
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 

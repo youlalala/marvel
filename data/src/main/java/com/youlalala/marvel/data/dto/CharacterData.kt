@@ -1,7 +1,6 @@
 package com.youlalala.marvel.data.dto
 
 data class CharacterData(
-    val comicsListData: ComicsListData,
     val description: String,
     val id: Int,
     val modified: String,

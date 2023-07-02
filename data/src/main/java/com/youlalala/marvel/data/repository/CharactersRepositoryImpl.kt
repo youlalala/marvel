@@ -3,7 +3,7 @@ package com.youlalala.marvel.data.repository
 import com.youlalala.marvel.data.Utils
 import com.youlalala.marvel.data.datasource.CharactersRemoteDataSource
 import com.youlalala.marvel.data.mapper.toDomain
-import com.youlalala.marvel.domain.CharactersRepository
+import com.youlalala.marvel.domain.repository.CharactersRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
