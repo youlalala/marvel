@@ -1,4 +1,4 @@
-package com.youlalala.marvel.domain
+package com.youlalala.marvel.domain.repository
 
 import com.youlalala.marvel.domain.model.Character
 import kotlinx.coroutines.flow.Flow
