@@ -13,7 +13,7 @@ fun bindCharacters(recyclerView: RecyclerView, itemList: List<Character>){
     adapter.submitList(itemList)
 }
 
-@BindingAdapter("image_url")
+@BindingAdapter("imageUrl")
 fun bindImg(view: ImageView, url: String){
     Glide.with(view.rootView)
         .load(url)

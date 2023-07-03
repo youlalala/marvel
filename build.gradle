@@ -27,4 +27,8 @@ ext{
 
     //glide version
     glide_version = "4.15.1"
+    glide_compose_version = "1.0.0-alpha.1"
+
+    //compose
+    composeThemeAdapterVersion = '1.1.1'
 }

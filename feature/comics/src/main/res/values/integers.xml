@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Number of columns for comic list grid -->
+    <integer name="grid_2_columns">2</integer>
+
+</resources>
