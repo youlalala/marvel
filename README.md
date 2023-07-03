@@ -1,5 +1,15 @@
-# Marvel
-👽 For best practices: Clean Architecture, Multi Modules, Hilt, MVVM, Coroutines with migrating a View-based app to Jetpack Compose.
+# 👽 Marvel
+For best practices: Clean Architecture, Multi Modules, Hilt, MVVM, Coroutines with migrating a View-based app to Jetpack Compose.
+
+## 🏃 How to run the project
+1. You should get an API Key. (https://developer.marvel.com/)
+2. Save the base url and your keys (public & private key) in your `local.properties`.
+```
+MARVEL_BASE_URL = "https://gateway.marvel.com:443/v1/public/"
+MARVEL_PUBLIC_KEY = [YOUR PUBLIC KEY]
+MARVEL_PRIVATE_KEY = [YOUR PRIVATE KEY]
+```
+3. Build and run the project
 
 ## 🏛 Architecture
 ### Clean Architecture
