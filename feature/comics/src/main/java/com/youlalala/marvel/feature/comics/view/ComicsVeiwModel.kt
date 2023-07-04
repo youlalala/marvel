@@ -1,7 +1,5 @@
 package com.youlalala.marvel.feature.comics.view
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.youlalala.marvel.domain.model.Comic
@@ -18,20 +16,14 @@ class ComicsViewModel @Inject constructor(
     private val getComicsUseCase: GetComicsUseCase
 ): ViewModel(){
 
-//    private val _comicsListFlow = MutableStateFlow<List<Comic>>(emptyList())
-//    val comicsListFlow: StateFlow<List<Comic>> = _comicsListFlow
-    private val _comicsListLiveData = MutableLiveData<List<Comic>>()
-    val comicsListLiveData: LiveData<List<Comic>> = _comicsListLiveData
+    private val _comicsListFlow = MutableStateFlow<List<Comic>>(emptyList())
+    val comicsListFlow: StateFlow<List<Comic>> = _comicsListFlow
 
     fun getComics(){
         viewModelScope.launch{
             getComicsUseCase().collectLatest {
-                _comicsListLiveData.postValue(it)
+                _comicsListFlow.value = it
             }
-//            getComicsUseCase().collectLatest{
-//                Log.i("TEST",it.toString())
-//                _comicsListFlow.value = it
-//            }
         }
     }
 }
