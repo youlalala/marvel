@@ -47,5 +47,14 @@ The application consists of 3 layers.
 
 
 ## ⚒ Tech Stack
+- `Clean Architecture` + `Multi Module` + `MVVM`
+- Migrate from a View-based app to `Compose`.
+- `Coroutines` `Flow` : Asynchronous
+- `ViewModel` `ViewBinding` `Navigation` `Compose` : Jetpack
+- `Hilt` : Dependency Injection
+- `Retrofit` : Network
+- `Glide` : Image Library
 
-작성중(...)
+
+
+(...작성중)
