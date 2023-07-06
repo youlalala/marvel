@@ -31,4 +31,8 @@ ext{
 
     //compose
     composeThemeAdapterVersion = '1.1.1'
+    composeVersion = '1.4.3'
+
+    //lifecycle
+    lifecycle_version = "2.5.1"
 }
