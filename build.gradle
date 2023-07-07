@@ -4,6 +4,7 @@ plugins {
     id 'com.android.library' version '8.0.2' apply false
     id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
     id 'com.google.dagger.hilt.android' version '2.42' apply false
+    id "androidx.navigation.safeargs" version '2.5.3' apply false
 }
 
 ext{
@@ -23,7 +24,7 @@ ext{
     okhttpVersion = "4.10.0"
 
     //navigation version
-    nav_version = "2.6.0"
+    nav_version = "2.5.3"
 
     //glide version
     glide_version = "4.15.1"

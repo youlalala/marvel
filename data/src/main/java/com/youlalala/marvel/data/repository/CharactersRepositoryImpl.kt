@@ -20,4 +20,12 @@ class CharactersRepositoryImpl @Inject constructor(
             emit(response.data.results.toDomain())
         }
     }
+
+    override fun getCharacterDetail(id: Int): Flow<List<Character>> = flow {
+        val ts = Utils.getTimesStamp()
+        val response = charactersDataSource.getCharacterDetail(id, ts, Utils.getTsHash(ts))
+        if (response.code == 200) {
+            emit(response.data.results.toDomain())
+        }
+    }
 }

@@ -8,6 +8,19 @@
     <fragment
         android:id="@+id/charactersFragment"
         android:name="com.youlalala.marvel.feature.characters.view.CharactersFragment"
-        tools:layout="@layout/fragment_characters" />
+        tools:layout="@layout/fragment_characters" >
+        <action
+            android:id="@+id/action_charactersFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.youlalala.marvel.feature.characters.view.CharacterDetailFragment"
+        tools:layout="@layout/fragment_character_detail">
+        <argument
+            android:name="characterId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>
