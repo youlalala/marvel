@@ -19,10 +19,10 @@ The application consists of 3 layers.
 
 1. **Presentation Layer** <br/>
     - `view` : Displays the application data on the screen (Activity/Fragment)
-    - `viewmodel` : Stores UI realted data and interacts with the domain layer.
+    - `viewmodel` : Stores UI related data and interacts with the domain layer.
 2. **Domain Layer** <br/>
   Contains the **business logic** of the application. <br/>
-  It's a individual moduel and complete java/kotlin module. <br/> 
+  It's an individual module and complete java/kotlin module. <br/> 
   The domain layer is responsible for encapsulating complex business logic, or simple business logic that is reused by multiple ViewModels.
     - `usecase` : Contains the business logic of the application.
     - `repository interface`
@@ -30,7 +30,7 @@ The application consists of 3 layers.
 3. **Data Layer** <br/>
    Handles data retrieval, storage, and mapping.
     - `datasource` : Represents the source of data, such as a network API or a local DB responsible for data retrieval and storage.
-    - `repository impl` : Implments the repository interface in the domain layer.
+    - `repository impl` : Implements the repository interface in the domain layer.
     - `mapper` : Converts data model to domain model.
     - `model` (dto) : Represents the data structure or objects used within the data layer.
 
@@ -43,7 +43,7 @@ The application consists of 3 layers.
   - `feature` : Contains an isolated part of an app's functionality.
   - `common-ui` : Contains custom UI elements that helps make UI consistent across different features.
   - `domain` : Encapsulates the business logic of the application.
-  - `data` : Containes a repository, data sources and model classes.
+  - `data` : Contains a repository, data sources and model classes.
 
 
 ## ⚒ Tech Stack
