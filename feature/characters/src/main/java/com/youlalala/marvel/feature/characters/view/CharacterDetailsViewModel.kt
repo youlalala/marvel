@@ -1,6 +1,5 @@
 package com.youlalala.marvel.feature.characters.view
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.youlalala.marvel.domain.model.Character
@@ -12,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class CharacterDetailViewModel @Inject constructor(
+class CharacterDetailsViewModel @Inject constructor(
     private val getCharacterDetailUseCase: GetCharacterDetailUseCase,
 ): ViewModel() {
 

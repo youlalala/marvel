@@ -10,9 +10,7 @@ class CharactersViewHolder(private val binding: ItemCharacterBinding): RecyclerV
 
     init {
         binding.setClickListener{
-            binding.character?.let{ character ->
-                navigateToCharacterDetail(character, it)
-            }
+            navigateToCharacterDetail(binding.character!!, it)
         }
     }
 
