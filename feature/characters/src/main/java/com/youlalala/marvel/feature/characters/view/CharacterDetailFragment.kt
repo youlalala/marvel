@@ -9,6 +9,7 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.composethemeadapter.MdcTheme
+import com.youlalala.marvel.feature.characters.viewmodels.CharacterDetailsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -19,6 +20,7 @@ class CharacterDetailFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        characterDetailsViewModel.getCharacterDetail(args.characterId)
     }
 
     override fun onCreateView(
@@ -28,7 +30,7 @@ class CharacterDetailFragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 MdcTheme {
-                    CharacterDetailsScreen()
+                    CharacterDetailsScreen(characterDetailsViewModel)
                 }
             }
         }
@@ -36,8 +38,6 @@ class CharacterDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        characterDetailsViewModel.getCharacterDetail(args.characterId)
     }
 
 }

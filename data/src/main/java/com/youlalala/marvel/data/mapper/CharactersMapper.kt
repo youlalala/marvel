@@ -10,7 +10,8 @@ object CharactersMapper {
             Character(
                 id = it.id,
                 name = it.name,
-                thumbnail_url = it.thumbnail.path+"."+it.thumbnail.extension
+                thumbnail_url = it.thumbnail.path+"."+it.thumbnail.extension,
+                description = it.description,
             )
         }
     }

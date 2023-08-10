@@ -7,5 +7,5 @@ data class CharacterData(
     val name: String,
     val resourceURI: String,
     val thumbnail: ThumbnailData,
-    val urlData: List<UrlData>
+    val urlData: List<UrlData>,
 )

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.youlalala.marvel.feature.characters.CharactersAdapter
 import com.youlalala.marvel.feature.characters.databinding.FragmentCharactersBinding
+import com.youlalala.marvel.feature.characters.viewmodels.CharactersViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

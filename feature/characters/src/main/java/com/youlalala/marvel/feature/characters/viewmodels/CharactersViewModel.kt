@@ -1,4 +1,4 @@
-package com.youlalala.marvel.feature.characters.view
+package com.youlalala.marvel.feature.characters.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

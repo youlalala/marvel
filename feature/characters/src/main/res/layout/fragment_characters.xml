@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.youlalala.marvel.feature.characters.view.CharactersViewModel" />
+            type="com.youlalala.marvel.feature.characters.viewmodels.CharactersViewModel" />
         <variable
             name="adapter"
             type="com.youlalala.marvel.feature.characters.CharactersAdapter" />
