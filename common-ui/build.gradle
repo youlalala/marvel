@@ -44,4 +44,12 @@ dependencies {
 
     api "com.github.bumptech.glide:glide:$glide_version"
     api "com.github.bumptech.glide:compose:$glide_compose_version"
+
+    //compose
+    api 'androidx.compose.material:material'
+    api 'androidx.compose.ui:ui'
+    api "com.google.android.material:compose-theme-adapter:$composeThemeAdapterVersion"
+    api "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    api "androidx.compose.ui:ui-tooling-preview:$composeVersion"
+    api "androidx.compose.ui:ui-tooling:$composeVersion"
 }
