@@ -8,4 +8,7 @@ object Dimens {
 
     val PaddingNormal: Dp
         @Composable get() = dimensionResource(R.dimen.margin_normal)
+
+    val CardCornerRadius: Dp
+        @Composable get() = dimensionResource(R.dimen.card_corner_radius)
 }

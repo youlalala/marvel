@@ -3,11 +3,9 @@ package com.youlalala.marvel.feature.characters.view
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Text
@@ -18,7 +16,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalInspectionMode
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -28,10 +25,10 @@ import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
+import com.youlalala.marvel.common_ui.Dimens
 import com.youlalala.marvel.domain.model.Character
 import com.youlalala.marvel.feature.characters.R
 import com.youlalala.marvel.feature.characters.viewmodels.CharacterDetailsViewModel
-import kotlinx.coroutines.withContext
 
 @Composable
 fun CharacterDetailsScreen(
@@ -47,9 +44,8 @@ fun CharacterDetailsScreen(
 fun CharacterDetailsScreen(
     character: Character,
 ){
-
-    Column(modifier = Modifier.padding(16.dp)){
-        Card(shape = RoundedCornerShape(dimensionResource(id = R.dimen.card_corner_radius))){
+    Column(modifier = Modifier.padding(Dimens.PaddingNormal)) {
+        Card(shape = RoundedCornerShape(Dimens.CardCornerRadius)){
             if (LocalInspectionMode.current) {
                 Box(modifier = Modifier.background(Color.LightGray).height(200.dp).fillMaxWidth())
                 return@Card
@@ -65,7 +61,7 @@ fun CharacterDetailsScreen(
             text = character.name,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(top = 20.dp)
+            modifier = Modifier.padding(top = Dimens.PaddingNormal)
         )
         Text(
             text = character.description,
