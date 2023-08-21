@@ -3,7 +3,7 @@ package com.youlalala.marvel.feature.comics.view
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.youlalala.marvel.domain.model.Comic
-import com.youlalala.marvel.domain.usecase.GetComicsUseCase
+import com.youlalala.marvel.domain.usecase.ComicsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ComicsViewModel @Inject constructor(
-    private val getComicsUseCase: GetComicsUseCase
+    private val comicsUseCase: ComicsUseCase
 ): ViewModel(){
 
     private val _comicsListFlow = MutableStateFlow<List<Comic>>(emptyList())
@@ -21,7 +21,7 @@ class ComicsViewModel @Inject constructor(
 
     fun getComics(){
         viewModelScope.launch{
-            getComicsUseCase().collectLatest {
+            comicsUseCase.getComics().collectLatest {
                 _comicsListFlow.value = it
             }
         }
