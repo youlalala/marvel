@@ -3,7 +3,7 @@ package com.youlalala.marvel.feature.characters.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.youlalala.marvel.domain.model.Character
-import com.youlalala.marvel.domain.usecase.GetCharactersUseCase
+import com.youlalala.marvel.domain.usecase.CharactersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CharactersViewModel @Inject constructor(
-    private val getCharactersUseCase: GetCharactersUseCase
+    private val charactersUseCase: CharactersUseCase,
 ): ViewModel(){
 
     private val _charactersUiState = MutableStateFlow<CharactersUiState>(CharactersUiState.Loading)
@@ -24,7 +24,7 @@ class CharactersViewModel @Inject constructor(
 
     fun getCharacters(){
         viewModelScope.launch{
-            getCharactersUseCase()
+            charactersUseCase.getCharacters()
                 .onStart {
                     _charactersUiState.value = CharactersUiState.Loading
                 }.catch {
