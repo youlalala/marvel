@@ -1,12 +1,9 @@
 package com.youlalala.marvel.feature.comics.view
 
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -24,7 +21,7 @@ fun ComicsScreen(
     viewModel: ComicsViewModel = viewModel()
 ){
     val comics by viewModel.comicsListFlow.collectAsState()
-    ComicsScreen(comics = comics)
+    ComicsScreen(comics = comics.comics)
 }
 
 @Composable

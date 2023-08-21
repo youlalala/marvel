@@ -1,8 +1,9 @@
 package com.youlalala.marvel.feature.comics.view
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.youlalala.marvel.domain.model.Comic
+import com.youlalala.marvel.domain.model.ComicList
 import com.youlalala.marvel.domain.usecase.ComicsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -16,14 +17,16 @@ class ComicsViewModel @Inject constructor(
     private val comicsUseCase: ComicsUseCase
 ): ViewModel(){
 
-    private val _comicsListFlow = MutableStateFlow<List<Comic>>(emptyList())
-    val comicsListFlow: StateFlow<List<Comic>> = _comicsListFlow
-
+    val comicsListFlow = MutableStateFlow<ComicList>(ComicList(emptyList()))
     fun getComics(){
         viewModelScope.launch{
             comicsUseCase.getComics().collectLatest {
-                _comicsListFlow.value = it
+                Log.i("test",it.toString())
+                if(it.isSuccess){
+                    comicsListFlow.value = it.getOrNull()!!
+                }
             }
         }
     }
+
 }
