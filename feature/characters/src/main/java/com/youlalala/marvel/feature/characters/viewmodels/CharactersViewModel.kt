@@ -1,5 +1,6 @@
 package com.youlalala.marvel.feature.characters.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.youlalala.marvel.domain.model.Character
